@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BuyDog"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:background="@drawable/primary_rounded_bg">
+
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:src="@drawable/dog_1" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/contact_bg"
+        android:padding="20dp"
+        android:layout_marginTop="-20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buy_dog_title_breed"
+            android:text="German Shepherd"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/black"
+            android:layout_marginBottom="15dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name: "
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/buy_dog_name"
+                android:text="Jeffrey"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Age: "
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/buy_dog_age"
+                android:text="6 months old"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sex: "
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/buy_dog_sex"
+                android:text="M"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Location: "
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/buy_dog_location"
+                android:text="Ikeja, Lagos."
+                android:textSize="20sp"
+                android:textStyle="normal"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Background: "
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/buy_dog_background"
+                android:text="This dog is practically like a wanted criminal. \nHe is very much capable of killing.
+                                \nBe careful of this monster."
+                android:textSize="20sp"
+                android:textStyle="normal"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cost: "
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/buy_dog_cost"
+                android:text="$1500"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/buy_dog_buy_btn"
+                android:layout_weight="2"
+                android:text="buy now"
+                android:textColor="@color/white"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/login_btn_bg"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/buy_dog_add_to_cart_btn"
+                android:layout_weight="2"
+                android:text="add to cart"
+                android:textColor="@color/white"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/login_btn_bg"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
