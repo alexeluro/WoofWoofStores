@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import com.inspiredcoda.woofwoofstores.R;
 import com.inspiredcoda.woofwoofstores.model.CartItem;
+import com.inspiredcoda.woofwoofstores.model.Dog;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,7 +38,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
     public void onBindViewHolder(@NonNull CartViewHolder holder, int position) {
         holder.cartItemName.setText(cartItems.get(position).getName());
         holder.cartItemPrice.setText(String.valueOf(cartItems.get(position).getPrice()));
-        holder.cartItemQuantity.setText(cartItems.get(position).getQuantity());
+        holder.cartItemQuantity.setText(String.valueOf(cartItems.get(position).getQuantity()));
 
         Log.d(TAG, "onBindViewHolder: Cart Item Price: "+ cartItems.get(position).getPrice());
     }

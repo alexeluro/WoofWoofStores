@@ -14,10 +14,12 @@
         android:background="@drawable/primary_rounded_bg">
 
         <ImageView
-            android:layout_width="250dp"
-            android:layout_height="250dp"
+            android:layout_width="200dp"
+            android:layout_height="210dp"
+            android:id="@+id/buy_dog_image"
             android:layout_gravity="bottom|center_horizontal"
-            android:src="@drawable/dog_1" />
+            android:src="@drawable/dog_1"
+            android:transitionName="common_dog"/>
 
     </FrameLayout>
 

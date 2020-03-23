@@ -38,7 +38,7 @@ public class HomeFragment extends Fragment {
         dogBreedTextLayout.setAnimation(AnimationUtils.loadAnimation(container.getContext(), R.anim.dog_breed_anim));
 
         homeViewModel = ViewModelProviders.of(this).get(HomeViewModel.class);
-        homeViewModel.init();
+//        homeViewModel.init();
         homeViewModel.getData().observe(getViewLifecycleOwner(), new Observer<List<Dog>>() {
             @Override
             public void onChanged(List<Dog> dogs) {
@@ -51,7 +51,6 @@ public class HomeFragment extends Fragment {
                 }
             }
         });
-
 
         return root;
     }
@@ -70,6 +69,7 @@ public class HomeFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        adapter.notifyDataSetChanged();
+        initRecyclerView1();
+        initRecyclerView2();
     }
 }

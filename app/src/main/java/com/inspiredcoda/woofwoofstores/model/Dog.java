@@ -4,19 +4,21 @@ public class Dog {
 
     private String name;
     private String sex;
-    private int ageInMonths;
+    private String ageInMonths;
     private String background;
     private String location;
     private int dogImage;
+    private double price;
 
 
-    public Dog(String name, String sex, int ageInMonths, int dogImage, String background, String location) {
+    public Dog(String name, String sex, int ageInMonths, int dogImage, String background, String location, double price) {
         this.name = name;
         this.sex = sex;
-        this.ageInMonths = ageInMonths;
+        this.ageInMonths = String.valueOf(ageInMonths);
         this.dogImage = dogImage;
         this.background = background;
         this.location = location;
+        this.price = price;
     }
 
     public String getName() {
@@ -35,12 +37,12 @@ public class Dog {
         this.sex = sex;
     }
 
-    public int getAgeInMonths() {
+    public String getAgeInMonths() {
         return ageInMonths;
     }
 
     public void setAgeInMonths(int ageInMonths) {
-        this.ageInMonths = ageInMonths;
+        this.ageInMonths = ageInMonths+ "months";
     }
 
     public String getBackground() {
@@ -65,5 +67,13 @@ public class Dog {
 
     public void setDogImage(int dogImage) {
         this.dogImage = dogImage;
+    }
+
+    public String getPrice() {
+        return "$"+price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
 }

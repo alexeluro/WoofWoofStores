@@ -43,6 +43,9 @@ public class PayForDogFood extends AppCompatActivity implements View.OnClickList
         amount.setText(amountOfFood);
         foodImage.setImageResource(foodResource);
 
+        increaseQuantity.setOnClickListener(this);
+        reduceQuantity.setOnClickListener(this);
+        buyNow.setOnClickListener(this);
         addToCart.setOnClickListener(this);
 
     }
@@ -55,14 +58,14 @@ public class PayForDogFood extends AppCompatActivity implements View.OnClickList
             case R.id.increase_quantity:
                 if(quant >= 1){
                     quant = quant + 1;
-                    quantity.setText(quant);
+                    quantity.setText(String.valueOf(quant));
                 }
                 break;
 
             case R.id.reduce_quantity:
                 if(quant > 1){
                     quant = quant - 1;
-                    quantity.setText(quant);
+                    quantity.setText(String.valueOf(quant));
                 }
                 break;
 
@@ -74,6 +77,9 @@ public class PayForDogFood extends AppCompatActivity implements View.OnClickList
                         Toast.LENGTH_SHORT)
                         .show();
                 break;
+
+            case R.id.pay_for_dog_food_buy_now:
+                Toast.makeText(this, "Buy now button clicked!!", Toast.LENGTH_SHORT).show();
         }
     }
 }

@@ -1,12 +1,17 @@
 package com.inspiredcoda.woofwoofstores.adapter;
 
+import android.app.Activity;
+import android.app.ActivityOptions;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.inspiredcoda.woofwoofstores.BuyDog;
 import com.inspiredcoda.woofwoofstores.model.Dog;
 import com.inspiredcoda.woofwoofstores.R;
 
@@ -45,7 +50,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
         return dogs.size();
     }
 
-    class CustomViewHolder extends RecyclerView.ViewHolder{
+    class CustomViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         CardView mainCard;
         ImageView dogImage;
@@ -58,6 +63,38 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
             dogImage = itemView.findViewById(R.id.dog_image);
             location = itemView.findViewById(R.id.location);
 
+            dogImage.setOnClickListener(this);
+
+        }
+
+        @Override
+        public void onClick(View view) {
+            switch (view.getId()){
+//                case R.id.main_card:
+//
+//                    Toast.makeText(itemView.getContext(), "Main card touched", Toast.LENGTH_SHORT).show();
+//                    break;
+                case R.id.dog_image:
+                    Intent intent = new Intent(itemView.getContext(), BuyDog.class);
+                    intent.putExtra("dog_name", dogs.get(getAdapterPosition()).getName());
+                    intent.putExtra("dog_image", dogs.get(getAdapterPosition()).getDogImage());
+                    intent.putExtra("dog_sex", dogs.get(getAdapterPosition()).getSex());
+                    intent.putExtra("dog_age", dogs.get(getAdapterPosition()).getAgeInMonths());
+                    intent.putExtra("dog_location", dogs.get(getAdapterPosition()).getLocation());
+                    intent.putExtra("dog_background", dogs.get(getAdapterPosition()).getBackground());
+                    intent.putExtra("dog_price", dogs.get(getAdapterPosition()).getPrice());
+                    if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
+                        ActivityOptions options = ActivityOptions
+                                .makeSceneTransitionAnimation((Activity) itemView.getContext(),
+                                        dogImage,
+                                        "common_dog");
+                        itemView.getContext().startActivity(intent, options.toBundle());
+                    }else{
+                        itemView.getContext().startActivity(intent);
+                    }
+                    Toast.makeText(itemView.getContext(), "Dog touched", Toast.LENGTH_SHORT).show();
+                    break;
+            }
         }
     }
 }

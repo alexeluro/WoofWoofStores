@@ -8,7 +8,14 @@ import java.util.List;
 public class CartManager {
 
     private static List<CartItem> items = new ArrayList<>();
+    private static CartManager instance;
 
+    public static CartManager getInstance(){
+        if(instance == null){
+            instance = new CartManager();
+        }
+        return instance;
+    }
 
     public void addItemToCart(CartItem cartItem){
         items.add(cartItem);
